@@ -1,0 +1,11 @@
+# Project exclude paths
+/Homework_second/target/
+/.idea
+/dz_2_1.bin
+/logs.log
+/APDescription.txt
+/MTPs-Main-Container.txt
+/Homework2.iml
+
+# Project exclude paths
+/target/
