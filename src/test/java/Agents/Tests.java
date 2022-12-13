@@ -1,14 +1,12 @@
 package Agents;
 
 
-import find_agent_package.AgentDetector;
+import AgentDetector.AgentDetector;
 import jade.core.AID;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-
-import java.util.concurrent.CountDownLatch;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

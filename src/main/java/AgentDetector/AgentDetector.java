@@ -1,4 +1,4 @@
-package find_agent_package;
+package AgentDetector;
 
 import Factory.Factory;
 import Helpers.Listener;

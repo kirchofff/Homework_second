@@ -1,8 +1,7 @@
 package Agents;
 
-import find_agent_package.AgentDetector;
+import AgentDetector.AgentDetector;
 import jade.core.Agent;
-import jade.core.behaviours.OneShotBehaviour;
 import lombok.SneakyThrows;
 
 public class StartAgent extends Agent{

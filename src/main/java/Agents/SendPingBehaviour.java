@@ -1,11 +1,9 @@
 package Agents;
 
-import find_agent_package.AgentDetector;
+import AgentDetector.AgentDetector;
 import jade.core.AID;
-import jade.core.behaviours.OneShotBehaviour;
 import jade.core.behaviours.ParallelBehaviour;
 import jade.core.behaviours.TickerBehaviour;
-import jade.core.behaviours.WakerBehaviour;
 import jade.lang.acl.ACLMessage;
 import lombok.extern.slf4j.Slf4j;
 
