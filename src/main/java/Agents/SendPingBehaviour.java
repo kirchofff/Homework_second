@@ -17,7 +17,7 @@ public class SendPingBehaviour extends ParallelBehaviour {
     private AgentDetector ad;
     public SendPingBehaviour(AgentDetector ad){
         this.ad = ad;
-        addSubBehaviour(new TickerBehaviour(myAgent, 2000) {
+        addSubBehaviour(new TickerBehaviour(myAgent, 5000) {
             @Override
             protected void onTick() {
                 List <AID> receivers = new ArrayList<>(ad.getActiveAgents());
@@ -25,12 +25,11 @@ public class SendPingBehaviour extends ParallelBehaviour {
                     ACLMessage m = new ACLMessage(ACLMessage.REQUEST);
                     AID n = new AID(receivers.get(i).getLocalName(), false);
                     m.addReceiver(n);
-                    m.setContent("Agent: "+myAgent.getLocalName()+" send to "+receivers.get(i).getLocalName()+" ping");
-//                    log.info("{}", m.getContent());
+                    m.setContent(myAgent.getLocalName()+" wake and "+" send to "+receivers.get(i).getLocalName()+" ping");
+                    log.info("{}", m.getContent());
                     myAgent.send(m);
                     myAgent.addBehaviour(new ReceivePingBehaviour());
                     myAgent.addBehaviour(new ReceivePongBehaviour());
-                    System.out.println(myAgent.getLocalName()+" said "+receivers);
                 }
             }
         });

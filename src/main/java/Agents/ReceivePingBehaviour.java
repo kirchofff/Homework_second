@@ -18,7 +18,7 @@ public class ReceivePingBehaviour extends Behaviour {
             ACLMessage m = new ACLMessage(ACLMessage.CONFIRM);
             AID n = new AID(msg.getSender().getLocalName(), false);
             m.addReceiver(n);
-            m.setContent("Agent: "+myAgent.getLocalName()+" received ping from "+msg.getSender().getLocalName() + " and send him pong");
+            m.setContent(myAgent.getLocalName()+" received ping from "+msg.getSender().getLocalName() + " and send him pong");
             log.info("{}", m.getContent());
             myAgent.send(m);
             myAgent.removeBehaviour(this);

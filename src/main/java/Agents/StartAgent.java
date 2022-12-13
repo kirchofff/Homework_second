@@ -9,7 +9,7 @@ public class StartAgent extends Agent{
 
 
     private static final String communicationInterface = "\\Device\\NPF_Loopback";
-    private int port = 2228;
+    private int port = 5000;
     private int t = 1000;
     private AgentDetector ad;
     @SneakyThrows
