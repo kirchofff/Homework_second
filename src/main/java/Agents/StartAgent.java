@@ -17,7 +17,7 @@ public class StartAgent extends Agent{
         ad = new AgentDetector(communicationInterface, t, port, getAID());
         ad.startSending();
         ad.startDiscovering();
-        addBehaviour(new SendPingBehaviour(ad));
+        addBehaviour(new SendPingBehaviour(this, ad));
     }
     @Override
     public void doDelete() {
